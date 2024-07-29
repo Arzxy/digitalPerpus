@@ -160,7 +160,7 @@
     <footer class="row" style="padding-bottom: 45px; padding-top: 45px; padding-right: 100px; padding-left: 100px;">
         <div class="col-6 col-lg-4">
                 <h2 class="display-3" style="font-size: 21px;">Lokasi Kami:</h2>
-                <p>Kembangkuning, Ubrug, Jatiluhur, Purwakarta,<br>Jawa Barat, Indonesia - 41152</p>
+                <p>Kembangkuning, Jatiluhur, Purwakarta,<br>Jawa Barat, Indonesia - 41152</p>
             </div>
         </div>
         <div class="col-6 col-lg-4">
