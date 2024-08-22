@@ -138,6 +138,14 @@
 							</span>
 						</a>
 					</li>
+					<li class="treeview">
+						<a href="?page=MyApp/data_ktg">
+							<i class="fa fa-users"></i>
+							<span>Kelola Kategori</span>
+							<span class="pull-right-container">
+							</span>
+						</a>
+					</li>
 					<li class="header">SETTING</li>
 					<li class="treeview">
 						<a href="?page=MyApp/data_pengguna">
@@ -202,6 +210,20 @@
 							break;
 						case 'MyApp/del_agt':
 							include "admin/agt/del_agt.php";
+							break;
+
+						//ktg
+						case 'MyApp/data_ktg':
+							include "admin/ktg/data_ktg.php";
+							break;
+						case 'MyApp/add_ktg':
+							include "admin/ktg/add_ktg.php";
+							break;
+						case 'MyApp/edit_ktg':
+							include "admin/ktg/edit_ktg.php";
+							break;
+						case 'MyApp/del_ktg':
+							include "admin/ktg/del_ktg.php";
 							break;
 
 						//buku
