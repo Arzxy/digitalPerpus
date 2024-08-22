@@ -1,6 +1,6 @@
 <?php
 if(isset($_GET['kode'])){
-            $sql_hapus = "DELETE FROM tb_anggota WHERE id_anggota='".$_GET['kode']."'";
+            $sql_hapus = "DELETE FROM tb_kategori WHERE id='".$_GET['kode']."'";
             $query_hapus = mysqli_query($koneksi, $sql_hapus);
 
             if ($query_hapus) {
@@ -8,7 +8,7 @@ if(isset($_GET['kode'])){
                 Swal.fire({title: 'Hapus Data Berhasil',text: '',icon: 'success',confirmButtonText: 'OK'
                 }).then((result) => {
                     if (result.value) {
-                        window.location = 'index.php?page=MyApp/data_agt';
+                        window.location = 'index.php?page=MyApp/data_ktg';
                     }
                 })</script>";
                 }else{
@@ -16,7 +16,7 @@ if(isset($_GET['kode'])){
                 Swal.fire({title: 'Hapus Data Gagal',text: '',icon: 'error',confirmButtonText: 'OK'
                 }).then((result) => {
                     if (result.value) {
-                        window.location = 'index.php?page=NyApp/data_agt';
+                        window.location = 'index.php?page=NyApp/data_ktg';
                     }
                 })</script>";
             }

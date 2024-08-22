@@ -59,6 +59,17 @@
 				display: block!important;
 			}
 		}
+		.small-box .icon {
+			-webkit-transition: all 0.3s linear;
+			-o-transition: all 0.3s linear;
+			transition: all 0.3s linear;
+			position: absolute;
+			top: 10px;
+			left: 39%;
+			z-index: 0;
+			font-size: 120px;
+			color: rgba(0, 0, 0, 0.15);
+		}
 	</style>
 
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>

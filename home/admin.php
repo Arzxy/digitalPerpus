@@ -29,10 +29,10 @@
 	<!-- Small boxes (Stat box) -->
 	<div class="row">
 
-		<div class="col-lg-4 col-xs-6">
+		<div class="col-lg-6 ">
 			<!-- small box -->
 			<div class="small-box bg-primary" style="border-radius: 5px;">
-				<div class="inner" style="height: 100px;">
+				<div class="inner" style="height: 200px;">
 					<div class="icon">
 						<i class="ion-ios-book"></i>
 					</div>
@@ -45,7 +45,7 @@
 					</div>
 					<div style="display: flex; justify-content: flex-end;">
 						<button  onclick="location.href='?page=MyApp/data_buku'" style="background-color: rgb(44, 103, 137); border: none; color: #fff;
-						border-radius: 5px; padding-left: 15px; padding-right: 15px;">
+						border-radius: 5px; padding: 10px 20px;">
 							Detail
 						</button>
 					</div>
@@ -53,10 +53,10 @@
 			</div>
 		</div>
 
-		<div class="col-lg-4 col-xs-6">
+		<div class="col-lg-6 ">
 			<!-- small box -->
 			<div class="small-box bg-green" style="border-radius: 5px;">
-				<div class="inner" style="height: 100px;">
+				<div class="inner" style="height: 200px;">
 					<div class="icon">
 						<i class="ion-person-stalker"></i>
 					</div>
@@ -69,7 +69,7 @@
 					</div>
 					<div style="display: flex; justify-content: flex-end;">
 						<button  onclick="location.href='?page=MyApp/data_pengguna'" style="background-color: rgb(44, 103, 137); border: none; color: #fff;
-						border-radius: 5px; padding-left: 15px; padding-right: 15px;">
+						border-radius: 5px; padding:10px 20px;">
 							Detail
 						</button>
 					</div>
@@ -77,28 +77,5 @@
 			</div>
 		</div>
 
-		<div class="col-lg-4 col-xs-6">
-			<!-- small box -->
-			<div class="small-box bg-yellow" style="border-radius: 5px;">
-				<div class="inner" style="height: 100px;">
-					<div class="icon">
-						<i class="ion ion-ribbon-b"></i>
-					</div>
-				</div>
-				<div class="small-box-footer" style="color: #000; background-color: #fff; text-align: left; padding: 10px; border-radius: 0 0 5px 5px;">
-					<div>
-						<b>Jumlah Anggota</b>
-						<br>
-						<p><?= $agt; ?> Orang</p>
-					</div>
-					<div style="display: flex; justify-content: flex-end;">
-						<button  onclick="location.href='?page=MyApp/data_agt'" style="background-color: rgb(44, 103, 137); border: none; color: #fff;
-						border-radius: 5px; padding-left: 15px; padding-right: 15px;">
-							Detail
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
 </section>

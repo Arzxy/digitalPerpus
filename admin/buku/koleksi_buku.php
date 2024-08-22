@@ -12,7 +12,7 @@
             <option value="<?php echo $data['id']; ?>"><?php echo $data['nama_kategori']; ?></option>
             <?php } ?>
         </select>
-        <div style="display: flex; align-items: center; margin-left: 5px;">
+        <div class="col-8" style="display: flex; align-items: center; margin-left: 5px;">
             Search:&ensp;
             <input type="text" id="cari" class="form-control" placeholder="Cari nama buku!" size="40" onkeyup="filterBooks()">
         </div>
