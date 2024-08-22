@@ -4,9 +4,15 @@ $tanggal = date("Y-m-d");
   
 $carikode = mysqli_query($koneksi,"SELECT id_buku FROM tb_buku order by id_buku desc");
 $datakode = mysqli_fetch_array($carikode);
-$kode = $datakode['id_buku'];
-$urut = substr($kode, 1, 3);
-$tambah = (int) $urut + 1;
+if($datakode!=null)
+{
+	$kode = $datakode['id_buku'];
+}else{
+	$kode = 'B00';
+}
+	$urut = substr($kode, 1, 3);
+	$tambah = (int) $urut + 1;
+
 
 if (strlen($tambah) == 1){
 $format = "B"."00".$tambah;
@@ -63,8 +69,20 @@ $format = "B"."00".$tambah;
 						</div>
 
 						<div class="form-group">
-							<label>Penerbit</label>
-							<input type="text" name="penerbit" id="penerbiit" class="form-control" placeholder="Penerbit" maxlength="20" required>
+							<label>Kategori</label>
+							<select id="kategori" name="kategori" class="form-control">
+								<?php
+									$sql = $koneksi->query("SELECT * from tb_kategori");
+									while ($data= $sql->fetch_assoc()) {
+								?>
+								<option value="<?php echo $data['id']; ?>"><?php echo $data['nama_kategori']; ?></option>
+								<?php } ?>
+							</select>
+						</div>
+
+						<div class="form-group">
+							<label>Penulis</label>
+							<input type="text" name="penerbit" id="penerbiit" class="form-control" placeholder="Penulis" maxlength="20" required>
 						</div>
 
 						<div class="form-group">
@@ -107,8 +125,9 @@ $format = "B"."00".$tambah;
 	$pindahh = move_uploaded_file($sumberr, $targett.$nama_filee);
 
     if (isset ($_POST['Simpan'])){
-		$sql_simpan = "INSERT INTO tb_buku (id_buku,judul_buku,penerbit,tgl,file_buku,file_banner) VALUES (
+		$sql_simpan = "INSERT INTO tb_buku (id_buku,id_kategori,judul_buku,penerbit,tgl,file_buku,file_banner) VALUES (
 		'".$_POST['id_buku']."',
+		'".$_POST['kategori']."',
 		'".$_POST['judul_buku']."',
 		'".$_POST['penerbit']."',
 		'".$tanggal."',

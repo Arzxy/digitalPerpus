@@ -131,14 +131,6 @@
 						</a>
 					</li>
 					<li class="treeview">
-						<a href="?page=MyApp/data_agt">
-							<i class="fa fa-users"></i>
-							<span>Kelola Anggota</span>
-							<span class="pull-right-container">
-							</span>
-						</a>
-					</li>
-					<li class="treeview">
 						<a href="?page=MyApp/data_ktg">
 							<i class="fa fa-users"></i>
 							<span>Kelola Kategori</span>
@@ -180,9 +172,6 @@
 						case 'admin':
 							include "home/admin.php";
 							break;
-						case 'petugas':
-							include "home/petugas.php";
-							break;
 				
 						//Pengguna
 						case 'MyApp/data_pengguna':
@@ -198,20 +187,6 @@
 							include "admin/pengguna/del_pengguna.php";
 							break;
 							
-						//agt
-						case 'MyApp/data_agt':
-							include "admin/agt/data_agt.php";
-							break;
-						case 'MyApp/add_agt':
-							include "admin/agt/add_agt.php";
-							break;
-						case 'MyApp/edit_agt':
-							include "admin/agt/edit_agt.php";
-							break;
-						case 'MyApp/del_agt':
-							include "admin/agt/del_agt.php";
-							break;
-
 						//ktg
 						case 'MyApp/data_ktg':
 							include "admin/ktg/data_ktg.php";
@@ -309,18 +284,6 @@
 			$(function() {
 				//Initialize Select2 Elements
 				$(".select2").select2();
-			});
-		</script>
-
-		<script>
-			Morris.Bar({
-			element : 'order-chart',
-			data:[<?php echo $morris_data; ?>],
-			xkey:'y',
-			ykeys:['a'],
-			labels:['Pengunjung'],
-			hideHover:'auto',
-			stacked:true
 			});
 		</script>
 </body>

@@ -100,8 +100,8 @@
 </head>
 <body>
     <div class="hero">
-        <!-- <img src="https://i.giphy.com/9DefTAr6NRRnV82U08.webp" autoplay="" loop="" muted="" plays-inline="" class="back-video"></video> -->
-        <img src="https://i.giphy.com/9DefTAr6NRRnV82U08.webp" width="1349" height="607" class="back-video"></img>
+        <video src="VideoPerpus.mp4" autoplay="" loop="" muted="" plays-inline="" class="back-video"></video>
+        <!-- <img src="https://i.giphy.com/9DefTAr6NRRnV82U08.webp" width="100%" height="100%" class="back-video"></img> -->
         <div class="content text-center">
             <h1 class=" fw-bold ">Digital Library</h1>
             <a href="page.php" class="background-primary">Baca Yuk!</a>

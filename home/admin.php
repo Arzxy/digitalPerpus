@@ -102,19 +102,3 @@
 		</div>
 	</div>
 </section>
-
-<!-- Content Header (Page header) -->
-<section style="text-align: center; max-width: 100%; width: 100%; overflow-x: scroll;">
-	<section class="content-header">
-		<h1>
-			Grafik Pengunjung Digital Library
-		</h1>
-	</section>
-	<div class="card">
-		<div class="card-body">
-			<span class="text-muted text-uppercase fs-12 fw-bold">GRAFIK PENGUNJUNG 7 HARI TERAKHIR</span>
-
-			<div id="order-chart"></div>
-		</div>
-	</div>
-</section>
