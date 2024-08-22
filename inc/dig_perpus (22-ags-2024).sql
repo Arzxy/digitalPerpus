@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 11 Agu 2024 pada 11.25
+-- Waktu pembuatan: 22 Agu 2024 pada 17.41
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 7.4.19
 
@@ -50,7 +50,8 @@ INSERT INTO `tb_anggota` (`id_anggota`, `nama`, `jenis_anggota`, `password`, `le
 
 CREATE TABLE `tb_buku` (
   `id_buku` varchar(10) NOT NULL,
-  `judul_buku` varchar(20) NOT NULL,
+  `id_kategori` int(11) NOT NULL,
+  `judul_buku` varchar(900) NOT NULL,
   `penerbit` varchar(20) NOT NULL,
   `tgl` date NOT NULL,
   `file_buku` varchar(200) NOT NULL,
@@ -61,17 +62,34 @@ CREATE TABLE `tb_buku` (
 -- Dumping data untuk tabel `tb_buku`
 --
 
-INSERT INTO `tb_buku` (`id_buku`, `judul_buku`, `penerbit`, `tgl`, `file_buku`, `file_banner`) VALUES
-('B003', 'Naruto Shipuden', 'FAgrhh', '2024-07-10', 'Web Latihan 8 (202304023).pdf', 'qrcode.png'),
-('B004', 'Hari raya penuh Berk', 'vadba', '2024-07-10', 'Web Latihan 9 (202304023).pdf', 'download.jpg'),
-('B005', 'Jurnal ABC', 'CDBVE', '2024-07-10', 'jm_elektro,+Jurnal+Randi+V+Palit.pdf', 'Screenshot 2024-05-02 125525.png'),
-('B006', 'Arya modol', 'Akupaul', '2024-07-11', '2024.2.TRPL204.20.8iHlzFgJic.pdf', 'JasaKu Logo (JPG) (Akmal).jpg'),
-('B007', 'Arya geleh di kali', 'Unknownay', '2024-07-11', 'Rafly_A_202304002_English For Presentation.pdf', 'Chatt (1).png'),
-('B008', 'Arya ndasmu', 'CDBVE', '2024-07-11', 'WhatsApp Image 2022-04-29 at 21.38.13 (1).jpeg', 'Landing Page.png'),
-('B009', 'Arya anak bawamg', 'Lombaa', '2024-07-11', 'Rancang_Bangun_Aplikasi_Top_Up_Voucher_Game_Online.pdf', '2. Tugas Teks Dasar.jpg'),
-('B010', 'Arya punya bawang pu', 'Lopa', '2024-07-11', 'A.H.+Dalimunthe+et+al.pdf', 'Projek Sisfo Mobile.png'),
-('B011', 'Hari raya penuh Berk', 'Asamu', '2024-07-11', '1 Laravel 8.pdf', 'original-e36c38c8d7ac8f721763ed39d7dfdc79.jpg'),
-('B012', 'Kita hayu', 'Opw', '2024-08-01', '913-Gallery PDF-3553-1-10-20230429.pdf', 'Diagram Tanpa Judul.drawio (3).png');
+INSERT INTO `tb_buku` (`id_buku`, `id_kategori`, `judul_buku`, `penerbit`, `tgl`, `file_buku`, `file_banner`) VALUES
+('B001', 1, 'Perahu Kertas', 'Dewi Lestari', '2024-08-22', 'Perahu_Kertas.pdf', '220px-Perahu_Kertas_Sampul.jpg'),
+('B002', 2, 'Asal Usul Pohon Salak', 'Vidyasena Production', '2024-08-22', 'Asal Usul Pohon Salak dan Cerita-Cerita Bermakna Lainnya.pdf', 'download (2).jfif'),
+('B003', 3, 'Si Tupai Dan Tiga Cerita Lain', 'R. Ella Yulaelawati', '2024-08-22', 'Komik__TUPAI-ok.pdf', 'download (3).jfif'),
+('B004', 4, 'Biografi R.A. Kartini', 'ELVI LEILA SUHEILA', '2024-08-22', 'BIOGRAFI-R.A-KARTINI-Habis-Gelap-Terbitlah-Terang-By-Elvi-Leila-Suheila-.pdf', 'download (4).jfif'),
+('B005', 5, 'Berani Tidak Sukai', 'Ichiro Kishim', '2024-08-22', 'Berani Tidak Disukai (Ichiro Kishimi, Fumitake Koga) (z-lib.org).pdf', 'downlofdgdad.png');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_kategori`
+--
+
+CREATE TABLE `tb_kategori` (
+  `id` int(11) NOT NULL,
+  `nama_kategori` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data untuk tabel `tb_kategori`
+--
+
+INSERT INTO `tb_kategori` (`id`, `nama_kategori`) VALUES
+(1, 'Novel'),
+(2, 'Fiksi'),
+(3, 'Komik'),
+(4, 'Biografi'),
+(5, 'Non Fiksi');
 
 -- --------------------------------------------------------
 
@@ -92,7 +110,7 @@ CREATE TABLE `tb_pengguna` (
 --
 
 INSERT INTO `tb_pengguna` (`id_pengguna`, `nama_pengguna`, `username`, `password`, `level`) VALUES
-(1, 'Zainal Arifin', 'admin', '1', 'Administrator');
+(1, 'Zanial Skipen', 'admin', '1', 'Administrator');
 
 --
 -- Indexes for dumped tables
@@ -111,6 +129,12 @@ ALTER TABLE `tb_buku`
   ADD PRIMARY KEY (`id_buku`);
 
 --
+-- Indeks untuk tabel `tb_kategori`
+--
+ALTER TABLE `tb_kategori`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `tb_pengguna`
 --
 ALTER TABLE `tb_pengguna`
@@ -119,6 +143,12 @@ ALTER TABLE `tb_pengguna`
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_kategori`
+--
+ALTER TABLE `tb_kategori`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `tb_pengguna`
