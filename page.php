@@ -47,11 +47,6 @@
         .background-primary {
             background-color: rgb(44,103,137)!important;
         }
-		@media screen (min-width: 320px; and max-width: 425px;) {
-			.h1 {
-				font-size: 4vh;
-			}
-		}
 	</style>
 </head>
 
