@@ -4,11 +4,6 @@
 		$buku=$data['buku'];
 	}
 
-	$sql = $koneksi->query("SELECT count(id_anggota) as agt from tb_anggota");
-	while ($data= $sql->fetch_assoc()) {
-		$agt=$data['agt'];
-	}
-
 	$sql = $koneksi->query("SELECT count(id_pengguna) as admin from tb_pengguna");
 	while ($data= $sql->fetch_assoc()) {
 		$pustakawan=$data['admin'];

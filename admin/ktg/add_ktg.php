@@ -61,7 +61,7 @@ if ($cariId) {
 
 						<div class="form-group">
 							<label>Nama Kategori</label>
-							<input type="text" name="nama" id="nama" class="form-control" placeholder="Nama Kategori">
+							<input type="text" name="nama" id="nama" class="form-control" placeholder="Nama Kategori" required>
 						</div>
 
 					</div>

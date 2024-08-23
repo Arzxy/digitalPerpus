@@ -52,7 +52,7 @@
 						<div class="form-group">
 							<label>Nama Kategori</label>
 							<input type='text' class="form-control" name="nama" value="<?php echo $data_cek['nama_kategori']; ?>"
-							/>
+							required />
 						</div>
 
 					</div>
